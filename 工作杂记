@@ -1,0 +1,33 @@
+针对AndroidStudio进行编译
+终端 cd 到项目的 proj.android 打开如下命令： 
+cocos compile -p android --android-studio
+
+xcode打包apk
+终端 cd 到项目的 proj.android 打开如下命令： 
+cocos run -p android -m release
+编译android项目
+cocos compile -p android
+
+
+
+
+第三方渠道：
+去掉微信支付的sdk，，分两个android包，，编译时区分代码注释
+
+
+
+
+美团Android自动化之旅—生成渠道包
+http://tech.meituan.com/mt-apk-packaging.html
+美团Android自动化之旅—适配渠道包
+http://tech.meituan.com/mt-apk-adaptation.html
+
+
+
+##BUG调试：
+1. 终端cd 到 Android-NDK 路径： /Users/qqronaldz/Documents/eclipse/android-ndk-r9d
+
+2.导出logcat信息到bug.txt中:  adb logcat > foo.txt
+
+3.打libcocos2dcpp.so路径的堆栈：adb logcat | ndk-stack -sym /Users/qqronaldz/Desktop/project/code/pokerclient/proj.android/obj/local/armeabi-v7a
+
